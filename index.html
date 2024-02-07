@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <style>
+    /* CSS for the navigation bar */
+    /* CSS for the navigation bar */
+    nav {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      padding: 10px;
+      flex-wrap: wrap;
+      display: block;
+      text-align: center;
+
+
+    }
+
+    .nav-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .brand-logo {
+
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      position: absolute;
+      left: 10%;
+      /* Adjust the value as needed */
+      top: 10%;
+      transform: translate(-50%, -50%);
+      border-radius: 50px;
+    }
+
+
+    .brand-logo:hover {
+      text-decoration: underline;
+    }
+
+    ul#nav-mobile {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    ul#nav-mobile li {
+      margin-left: 10px;
+    }
+
+    ul#nav-mobile li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    ul#nav-mobile li a:hover {
+      text-decoration: underline;
+    }
+
+
+
+    .container {
+      padding-top: 3vw;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+
+
+    header {
+      display: flex;
+      justify-content: flex-end;
+      padding: 10px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #bc1111;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-image: url(ES/images/hospital.jpg );
+      background-size: cover;
+    }
+
+    .pollutant-card {
+      background-color: #f2f2f2;
+      border-radius: 5px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card {
+      background-color: #f2f2f2;
+      border-radius: 5px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .pollutant-card:hover {
+      transform: translateY(-15px);
+      box-shadow: 0 4px 6px rgba(189, 19, 19, 0.1);
+      background-color: rgb(243, 241, 228);
+      border-radius: 3vw;
+      border: solid rgb(199, 210, 81);
+      font-size: 20px;
+      font-weight: 200;
+      flex-direction: calc(#ccc);
+
+    }
+
+    .pollutant-card h2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: #333;
+      font-size: 20px;
+    }
+
+    .pollutant-card p {
+      color: #231c13;
+      font-size: 16px;
+      line-height: 3.5;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+
+    }
+
+    .search-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 4vw;
+    }
+
+    .search-input {
+      border: 1px solid #ccc;
+      padding: 10px;
+      font-size: 16px;
+      flex: 1;
+    }
+
+    .search-button {
+      background-color: #bc1111;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    .wikipedia-link {
+      color: #304a14;
+      text-decoration: solid;
+      border-radius: 1vw;
+      background-color: rgb(196, 0, 226), 0, 0);
+      height: 30px;
+      max-width: max-content;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .pollutant-card img {
+      width: 132px;
+      margin-bottom: 14px;
+
+
+    }
+
+
+    .navbar-item img {
+      margin-right: 10px;
+    }
+
+    li {
+      padding: 2vw;
+    }
+
+    footer {
+
+      padding: 20px 0;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .footer {
+      background-color: aqua;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      color: rgb(46, 101, 148);
+    }
+
+    .footer-column {
+      flex: 1 1 299px;
+      margin-bottom: 20px;
+      margin-left: 2vw;
+      background-color: #aab05a;
+      border-radius: 1vw;
+
+    }
+
+    .footer-column h3 {
+      color: #c9c05c00;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .footer-column p {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-weight: 600;
+      color: #4e5b20;
+      line-height: 1.5;
+      padding-right: 2vw;
+    }
+
+    .social-media {
+      list-style-type: square;
+
+      margin: 2vw auto;
+    }
+
+    .social-media li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .social-media a {
+      color: #333;
+      width: 33%;
+      font-size: 20px;
+      margin: 2 auto;
+      padding: 2vw;
+    }
+
+    .footer-bottom {
+      margin-top: 20px;
+      text-align: center;
+      color: #666;
+    }
+
+    .footer-bottom p {
+      margin: 0;
+    }
+
+    /* Example FontAwesome styles */
+    .fa-facebook:before {
+      content: "\f09a";
+
+    }
+
+    .fa-linkedin:before {
+      content: "\f08c";
+
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .container {
+      max-width: 50vw;
+      margin: 0 auto;
+      border-radius: 10%;
+      border: transparent rgb(5, 9, 1);
+    }
+
+    .cards-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      background-color: #f2f2f2;
+      border-radius: 5px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      display: none;
+      /* Initially hide the cards */
+    }
+
+    .show-more-button {
+      display: block;
+      margin: 0 auto;
+      padding: 10px 20px;
+      background-color: #bc1111;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+
+    .read-more-content {
+      display: none;
+    }
+
+    .read-more-content.show {
+      display: block;
+    }
+
+    .read-more-button {
+      margin-top: 5vw;
+      margin-bottom: 5vw;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .read-more-button:hover {
+      background-color: #45a049;
+    }
+
+    .read-more-button:focus {
+      outline: none;
+    }
+
+    .read-more-button:active {
+      background-color: #3e8e41;
+    }
+
+    .fa-facebook {
+      color: aqua;
+      height: 80%;
+    }
+
+    .searchkomathi {
+      font-family: fantasy;
+      font-size: 43px;
+      color: rgb(30, 0, 225);
+
+      width: 60%;
+      margin: auto;
+      padding-bottom: 4vw;
+      background: local;
+      justify-content: center;
+      text-align: center;
+      text-decoration: solid;
+      position: sticky;
+      text-shadow: #f4f3f0;
+    }
+
+    .dhairyashil {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    .dhairyashil th,
+    .dhairyashil td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .dhairyashil th {
+      background-color: #f2f2f2;
+    }
+
+    .dhairyashil tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    .dhairyashil tr:hover {
+      background-color: #f5f5f5;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="nav-wrapper">
+        <a class="brand-logo" href="/index.html">
+          <img src="ES/images/logo.jpg" width="118" height="98" border-radius="100%">
+        </a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/aboutus.html">About Us</a></li>
+          <li><a href="/contactus.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <p class="searchkomathi">Discover the impact of air, water, soil, noise, and light pollutants on our environment and
+    health. Our website provides valuable information and resources to raise awareness about different types of
+    pollutants.</p>
+
+  <div class="container">
+
+
+    <div class="search-bar">
+      <input type="text" class="search-input" placeholder="Search by pollutant name">
+      <button class="search-button">Search</button>
+    </div>
+
+    <div class="pollutant-cards">
+      <div class="pollutant-card card">
+        <div class="card-img">
+          <img src="ES/images/co.jpg" alt="Carbon_monoxide">
+        </div>
+        <div class="card-content">
+          <h2>Carbon Monoxide (CO)</h2>
+          <p>Reduces oxygen-carrying capacity of blood, leading to headaches, dizziness, and can be fatal in high
+            concentrations.</p>
+
+          <div class="read-more-content">
+            <p>Additional information about the pollutant can be displayed here.</p>
+            <p>You can include more details or related facts in this section.</p>
+            <a href="https://en.wikipedia.org/wiki/Carbon_monoxide" class="wikipedia-link">Learn more on Wikipedia</a>
+          </div>
+          <button class="read-more-button">Read More</button>
+        </div>
+      </div>
+
+
+
+      <div class="pollutant-card card">
+        <div class="card-img">
+          <img src="ES/images/no2.jpg" alt="Nitrogen_dioxide">
+        </div>
+        <div class="card-content">
+          <h2>Nitrogen Dioxide (NO<sub>2</sub>)</h2>
+          <p>Respiratory irritant, can cause respiratory infections, reduced lung function, and increased risk of asthma
+            attacks</p>
+
+          <div class="read-more-content">
+            <p>Additional information about the pollutant can be displayed here.</p>
+            <p>You can include more details or related facts in this section.</p>
+            <a href="https://en.wikipedia.org/wiki/Nitrogen_dioxide" class="wikipedia-link">Learn more on Wikipedia</a>
+          </div>
+          <button class="read-more-button">Read More</button>
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+
+
+
+    <div class="pollutant-card card">
+      <div class="card-img">
+        <img src="ES/images/so2.jpg" alt="Sulfur_dioxide">
+      </div>
+      <div class="card-content">
+        <h2>Sulfur Dioxide (SO<sub>2</sub>)</h2>
+        <p>Respiratory irritant, can cause breathing difficulties, asthma attacks, and contribute to the formation of
+          acid rain.</p>
+
+        <div class="read-more-content">
+          <p>Additional information about the pollutant can be displayed here.</p>
+          <p>You can include more details or related facts in this section.</p>
+          <a href="https://en.wikipedia.org/wiki/Sulfur_dioxide" class="wikipedia-link">Learn more on Wikipedia</a>
+        </div>
+        <button class="read-more-button">Read More</button>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="pollutant-card card">
+      <div class="card-img">
+        <img src="ES/images/lead.jpg" alt="lead">
+      </div>
+      <div class="card-content">
+        <h2>Lead (Pb)</h2>
+        <p>Affects the nervous system, especially in children, causing developmental delays, learning difficulties, and
+          behavioral problems.</p>
+
+        <div class="read-more-content">
+          <p>Additional information about the pollutant can be displayed here.</p>
+          <p>You can include more details or related facts in this section.</p>
+          <a href="https://en.wikipedia.org/wiki/Lead" class="wikipedia-link">Learn more on Wikipedia</a>
+        </div>
+        <button class="read-more-button">Read More</button>
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+  </div>
+
+  <div class="container">
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="pollutant-card card">
+      <div class="card-img">
+        <img src="ES/images/radioactive.jpg" alt="radioactive">
+      </div>
+      <div class="card-content">
+        <h2>Radioactive Waste</h2>
+        <p>
+          Although radiation affects different people in different ways, it is generally believed that humans exposed to
+          about 500 rem of radiation all at once will likely die without medical treatment.</p>
+
+        <div class="read-more-content">
+          <p>Additional information about the pollutant can be displayed here.</p>
+          <p>You can include more details or related facts in this section.</p>
+          <a href="https://en.wikipedia.org/wiki/Radioactive" class="wikipedia-link">Learn more on Wikipedia</a>
+        </div>
+        <button class="read-more-button">Read More</button>
+      </div>
+    </div>
+
+    <div class="pollutant-card card">
+      <div class="card-img">
+        <img src="/ES/images/platic.jpg" alt="plastic">
+      </div>
+      <div class="card-content">
+        <h2>Plastic</h2>
+        <p>Plastic has wide-ranging effects on the environment, including pollution, harm to wildlife, and long-term
+          ecological damage.</p>
+
+        <div class="read-more-content">
+          <p>
+          <h4>Reduce plastic consumption: </h4> The best way to manage plastic disposal is to reduce plastic consumption
+          in the first place. Opt for reusable alternatives such as cloth bags, stainless steel water bottles, and glass
+          containers. Avoid single-use plastic items like straws, cutlery, and bags whenever possible.
+
+          <h4>Recycling: </h4> Recycling is an important method for plastic disposal. Check with your local recycling
+          facilities to determine which types of plastic they accept. Rinse and clean plastic containers before
+          recycling them. Be sure to follow the specific recycling guidelines in your area to ensure proper sorting and
+          disposal.
+
+          <h4>Separate collection: </h4> Many communities have separate collection systems for plastic waste. Make use
+          of designated recycling bins or collection points to ensure that plastic is properly sorted and sent for
+          recycling. Separating plastic from other types of waste makes the recycling process more efficient.
+
+          <h4>Bottle return programs: </h4> Similar to glass, bottle return programs can be implemented for plastic
+          bottles. Some regions have schemes where consumers pay a small deposit fee when purchasing beverages in
+          plastic bottles, which can be refunded upon returning the bottles. These programs promote the reuse or
+          recycling of plastic bottles.
+
+          <h4>Composting: </h4> Certain types of biodegradable plastics can be composted under specific conditions.
+          However, it is important to note that most conventional plastics do not biodegrade in home composting systems.
+          Only compost plastic items that are specifically labeled as compostable and follow the guidelines provided.
+
+          <h4>Energy recovery: </h4> In cases where plastic cannot be recycled or composted, energy recovery methods
+          such as incineration with energy generation can be utilized. Advanced waste-to-energy facilities can convert
+          plastic waste into electricity or heat. However, it is important to ensure that these processes are conducted
+          in an environmentally responsible manner to minimize emissions and other negative impacts.
+
+          <h4>Landfill disposal: </h4> As a last resort, plastic waste may end up in landfills. However, this is not an
+          ideal solution due to the long decomposition time of plastic and the potential for environmental pollution. It
+          is essential to dispose of plastic waste responsibly in designated landfill areas to prevent littering and
+          minimize the impact on ecosystems. .</p>
+          <a href="https://en.wikipedia.org/wiki/Plastic" class="wikipedia-link">Learn more on Wikipedia</a>
+        </div>
+        <button class="read-more-button">Read More</button>
+      </div>
+    </div>
+
+
+    <div class="pollutant-card card">
+      <div class="card-img">
+        <img src="ES/images/glass.jpg" alt="glass">
+      </div>
+      <div class="card-content">
+        <h2>Glass</h2>
+        <p>Glass is prone to getting scratched and smudged, demanding regular upkeep. Moreover, its inadequate
+          insulation properties allow heat to dissipate easily, leading to energy inefficiency.</p>
+
+        <div class="read-more-content">
+          <p>
+          <h4>Recycling: </h4> Recycling is one of the most effective methods for glass disposal. Glass can be recycled
+          indefinitely without losing its quality, making it an environmentally friendly option. Glass recycling
+          involves collecting used glass, crushing it into small pieces called cullet, and melting it to create new
+          glass products.
+
+          <h4>Separate collection: </h4> Implementing a separate collection system for glass is important to facilitate
+          recycling. Many communities have designated glass collection bins or recycling centers where individuals can
+          dispose of their glass waste separately from other types of waste. This helps ensure that glass is properly
+          sorted and sent for recycling.
+
+          <h4>Bottle return programs: </h4> Bottle return programs encourage the return of glass bottles for reuse or
+          recycling. In some regions, consumers are charged a small deposit fee when purchasing beverages in glass
+          bottles, which can be refunded when the bottles are returned. This system promotes the reuse of glass bottles
+          and reduces waste.
+
+          <h4>Reuse: </h4> Glass containers such as jars and bottles can often be reused for various purposes. Instead
+          of disposing of glass containers, consider cleaning them thoroughly and repurposing them for storage, crafts,
+          or other creative uses. Reusing glass helps reduce waste and extends its lifespan.
+
+          <h4>Landfill disposal: </h4> While it is not the most environmentally friendly option, landfill disposal may
+          be necessary in certain cases where glass cannot be recycled or reused. It is essential to dispose of glass
+          waste properly in designated landfill areas to prevent contamination and minimize the impact on the
+          environment. .</p>
+          <a href="https://en.wikipedia.org/wiki/Lead" class="wikipedia-link">Learn more on Wikipedia</a>
+        </div>
+        <button class="read-more-button">Read More</button>
+      </div>
+    </div>
+
+
+    <div class="pollutant-card card">
+      <div class="card-img">
+        <img src="ES/images/rubber.jpg" alt="Rubber">
+      </div>
+      <div class="card-content">
+        <h2>Rubber</h2>
+        <p>Rubber latex can cause allergic reactions in some individuals, ranging from mild irritation to severe
+          anaphylaxis. Additionally, prolonged exposure to certain chemicals used in rubber production may result in
+          skin sensitization or respiratory issues.</p>
+
+        <div class="read-more-content">
+          <p>
+          <h4>Reuse and repurpose: </h4> Rubber items such as tires, mats, or rubberized fabrics can often be reused or
+          repurposed. For example, old tires can be retreaded or used in various applications such as playground
+          surfaces, rubberized asphalt, or as fuel in certain industries. Look for opportunities to give rubber products
+          a second life before considering disposal.
+
+          <h4>Recycling: </h4> Recycling is another effective method for rubber disposal. Rubber can be recycled into
+          new products or used as a raw material in various industries. There are specialized recycling facilities that
+          can process rubber waste, including tires and other rubber products. Check with local recycling centers or
+          waste management authorities to inquire about rubber recycling options in your area.
+
+          <h4>Donation: </h4> If the rubber items are still in good condition and can be used by others, consider
+          donating them. Charitable organizations, schools, or community centers might have a need for rubber materials
+          such as mats or playground surfaces. Donating rubber items helps extend their lifespan and reduces waste.
+
+          <h4>Tire retreading: </h4> In the case of rubber tires, retreading is a process where the worn-out tire tread
+          is replaced with a new one. Retreaded tires can be used again, reducing the demand for new tires and
+          conserving resources. Tire retreading facilities can professionally retread tires, extending their useful
+          life.
+
+          <h4>Landfill disposal: </h4> If rubber waste cannot be reused, repurposed, or recycled, it may end up in
+          landfills. Rubber has a slow decomposition rate, so it is essential to dispose of rubber waste properly in
+          designated landfill areas. Landfills should comply with environmental regulations to prevent pollution and
+          negative impacts on the surrounding ecosystems.
+
+          <h4>Energy recovery: </h4> In some cases, rubber waste can be used as a source of energy through processes
+          such as incineration. Advanced waste-to-energy facilities can convert rubber waste into electricity or heat.
+          However, it is important to ensure that these processes are conducted using appropriate technologies to
+          minimize emissions and potential environmental harm.
+
+          <h4>Research and development: </h4> Continued research and development efforts are focused on finding
+          innovative methods to recycle or repurpose rubber waste more effectively. By supporting research initiatives
+          and technological advancements in rubber recycling, we can contribute to the development of sustainable rubber
+          waste management practices. .</p>
+          <a href="https://en.wikipedia.org/wiki/Lead" class="wikipedia-link">Learn more on Wikipedia</a>
+        </div>
+        <button class="read-more-button">Read More</button>
+      </div>
+    </div>
+
+
+
+  </div>
+
+
+  <div class="container">
+    <div class="pollutant-card card">
+      <div class="card-img">
+        <img src="ES/images/mercury.jpg" alt="mercury">
+      </div>
+      <div class="card-content">
+        <h2>Mercury (Hg)</h2>
+        <p>Mercury exposure has the potential to cause severe health issues, including damage to the nervous system and
+          kidneys. Moreover, the accumulation of mercury in the environment presents a significant hazard to ecosystems
+          and the biodiversity within them.</p>
+
+        <div class="read-more-content">
+          <p>Additional information about the pollutant can be displayed here.</p>
+          <p>You can include more details or related facts in this section.</p>
+          <a href="https://en.wikipedia.org/wiki/Lead" class="wikipedia-link">Learn more on Wikipedia</a>
+        </div>
+        <button class="read-more-button">Read More</button>
+      </div>
+    </div>
+
+
+
+    <div class="pollutant-card card">
+      <div class="card-img">
+        <img src="ES/images/arsenic.jpg" alt="Arsenic">
+      </div>
+      <div class="card-content">
+        <h2>Arsenic</h2>
+        <p>Arsenic exposure can result in various health problems, including cancer, skin lesions, and organ damage.
+          Additionally, arsenic contamination in water and soil can pose a significant threat to both human populations
+          and the environment.</p>
+
+        <div class="read-more-content">
+          <p>
+            <h4>Safe Disposal of Arsenic:</h4>
+            Arsenic is a toxic substance, and its disposal should be handled with care to prevent harm to human health and the environment. The following methods are commonly used for the safe disposal of arsenic:
+          Hazardous Waste Facilities: Arsenic should be treated as hazardous waste and disposed of at authorized hazardous waste facilities. These facilities are equipped to handle and manage toxic materials properly.
+          Chemical Destruction: Arsenic can be chemically treated to convert it into less harmful forms. This process typically involves using specific chemicals or methods to neutralize and stabilize the arsenic before disposal.
+          Secure Packaging: When transporting or storing arsenic for disposal, it should be securely packaged in leak-proof containers that are labeled as hazardous waste. This helps prevent accidental release or contamination.
+          Compliance with Regulations: It is crucial to comply with local, state, and national regulations regarding the disposal of arsenic. These regulations provide guidelines and requirements to ensure the safe handling and disposal of hazardous materials.
+          </p>
+          <a href="https://en.wikipedia.org/wiki/Lead" class="wikipedia-link">Learn more on Wikipedia</a>
+        </div>
+        <button class="read-more-button">Read More</button>
+      </div>
+    </div>
+
+
+
+    <div class="pollutant-card card">
+      <div class="card-img">
+        <img src="ES/images/formaldehyde.jpeg" alt="formaldehyde">
+      </div>
+      <div class="card-content">
+        <h2>Formaldehyde</h2>
+        <p>Formaldehyde exposure can lead to respiratory issues, allergic reactions, and irritation of the eyes, nose,
+          and throat. Additionally, prolonged exposure to formaldehyde has been associated with an increased risk of
+          certain cancers, such as nasopharyngeal and leukemia.</p>
+
+        <div class="read-more-content">
+          <p>Additional information about the pollutant can be displayed here.</p>
+          <p>You can include more details or related facts in this section.</p>
+          <a href="https://en.wikipedia.org/wiki/Lead" class="wikipedia-link">Learn more on Wikipedia</a>
+        </div>
+        <button class="read-more-button">Read More</button>
+      </div>
+    </div>
+
+
+    <div class="pollutant-card card">
+      <div class="card-img">
+        <img src="ES/images/fiber.jpg" alt="formaldehyde">
+      </div>
+      <div class="card-content">
+        <h2>Fiber</h2>
+        <p>Exposure to certain types of fibers, such as asbestos, can cause severe respiratory diseases and lung cancer.
+          Moreover, prolonged contact with irritating fibers can lead to skin irritation, itching, and allergic
+          reactions.</p>
+
+        <div class="read-more-content">
+          <p>
+          <h4>Donate or reuse: </h4> If your textiles or paper waste are still in good condition, consider donating them
+          to charitable organizations or community centers. Many organizations accept used clothing, blankets, and other
+          textile items. Similarly, paper waste like newspapers, magazines, and cardboard boxes can be reused for arts
+          and crafts or donated to schools or creative groups.
+
+          <h4>Recycling: </h4> Recycling is an essential method for fiber garbage disposal. Many types of fibers,
+          including paper and certain textiles, can be recycled. Paper recycling involves collecting paper waste, which
+          is then processed and transformed into new paper products. Textile recycling involves sorting, shredding, and
+          reprocessing textiles to create new fabrics or non-woven materials. Check with local recycling centers or
+          waste management authorities for specific guidelines and facilities available in your area.
+
+          <h4>Composting: </h4> Certain types of fiber waste, such as paper towels, napkins, and natural fibers like
+          cotton and hemp, can be composted. These materials break down easily in composting systems and contribute to
+          the production of nutrient-rich compost. Ensure that the composting process follows proper guidelines and
+          avoid composting materials with synthetic fibers or chemical treatments.
+
+          <h4>Responsible landfill disposal: </h4> When fiber waste cannot be reused, recycled, or composted, it may end
+          up in landfills. It is crucial to dispose of fiber garbage responsibly in designated landfill areas. Landfills
+          should comply with environmental regulations to prevent contamination and reduce the environmental impact of
+          waste.
+
+          <h4>Waste-to-energy conversion: </h4> In some cases, fiber garbage can be used as a source of energy through
+          waste-to-energy conversion methods. Advanced facilities can incinerate fiber waste to generate heat or
+          electricity. However, it is important to ensure that these processes are conducted using appropriate
+          technologies to minimize emissions and potential environmental harm.
+
+          <h4>Source reduction: </h4> One of the most effective methods for fiber garbage disposal is source reduction,
+          which focuses on reducing the amount of waste generated in the first place. Opt for reusable items, minimize
+          paper usage, and choose durable and long-lasting textiles to reduce the overall generation of fiber waste.
+
+          <h4>Education and awareness: </h4> Promote education and awareness about responsible fiber garbage disposal.
+          Encourage others to recycle, reuse, and compost fiber waste. Raise awareness about the environmental impact of
+          fiber waste and the importance of making sustainable choices.</p>
+          <a href="https://en.wikipedia.org/wiki/Lead" class="wikipedia-link">Learn more on Wikipedia</a>
+        </div>
+        <button class="read-more-button">Read More</button>
+      </div>
+    </div>
+
+
+
+
+    <div class="pollutant-card card">
+      <div class="card-img">
+        <img src="ES/images/wood.jpg" alt="formaldehyde">
+      </div>
+      <div class="card-content">
+        <h2>Wood</h2>
+        <p>Wood dust inhalation can result in respiratory issues, including allergies, asthma, and potential lung
+          damage. Additionally, untreated or improperly treated wood can be susceptible to rot, decay, and termite
+          infestation, compromising its structural integrity.</p>
+
+        <div class="read-more-content">
+          <p>
+          <h4>Reuse and repurpose: </h4> Wood waste, such as lumber scraps or pallets, can often be reused or
+          repurposed. Consider using wood scraps for DIY projects, crafting, or as firewood. Pallets can be repurposed
+          for various purposes, such as furniture, garden structures, or artwork. Reusing wood helps extend its lifespan
+          and reduces waste.
+
+          <h4>Recycling: </h4> Recycling wood waste is an effective method for disposal. Wood can be recycled into
+          products such as particleboard, mulch, or wood pellets for fuel. Some recycling facilities accept wood waste,
+          while others specialize in recycling construction and demolition (C&D) debris. Check with local recycling
+          centers or waste management authorities to inquire about wood recycling options in your area.
+
+          <h4>Composting: </h4> Certain types of untreated wood waste, such as sawdust, wood chips, or bark, can be
+          composted. Wood-based materials break down over time and contribute to the production of nutrient-rich
+          compost. Ensure that the composting process follows proper guidelines and avoid composting wood treated with
+          chemicals or coatings.
+
+          <h4>Landfill disposal: </h4> If wood waste cannot be reused, recycled, or composted, it may end up in
+          landfills. However, this should be the last resort, as wood in landfills contributes to methane gas emissions.
+          Dispose of wood waste responsibly in designated landfill areas that comply with environmental regulations to
+          minimize negative impacts.
+
+          <h4>Energy recovery: </h4> In some cases, wood waste can be used as a source of energy through processes such
+          as biomass combustion or gasification. Advanced waste-to-energy facilities can convert wood waste into heat,
+          electricity, or biofuels. These processes can help reduce the reliance on fossil fuels and contribute to
+          renewable energy generation.
+
+          <h4>Responsible burning: </h4> If burning wood waste is allowed in your area, it can be an option for
+          disposal. However, it is important to ensure responsible burning practices, such as using wood-burning stoves
+          or fireplaces that meet emission standards and using dry, untreated wood. Avoid burning wood waste that is
+          painted, coated, or treated with chemicals, as it can release harmful pollutants.
+
+          <h4>Source reduction: </h4> To minimize wood waste generation, practice source reduction by optimizing wood
+          usage. Proper planning and measurement can help reduce the amount of excess or unused wood materials. Choose
+          sustainable wood products and prioritize durability to extend their lifespan. .</p>
+          <a href="https://en.wikipedia.org/wiki/Lead" class="wikipedia-link">Learn more on Wikipedia</a>
+        </div>
+        <button class="read-more-button">Read More</button>
+      </div>
+    </div>
+
+
+
+    <div class="pollutant-card card">
+      <div class="card-img">
+        <img src="ES/images/steel.jpg" alt="formaldehyde">
+      </div>
+      <div class="card-content">
+        <h2>Steel</h2>
+        <p>Steel can be a hazard due to its high conductivity, posing a risk of electrical shock or burns. Additionally,
+          prolonged exposure to steel dust or fumes can lead to respiratory problems and lung damage</p>
+
+        <div class="read-more-content">
+          <p>
+          <h4>Reuse and repurpose: </h4> Steel items, such as steel beams, pipes, or metal furniture, can often be
+          reused or repurposed. Consider selling or donating steel items that are still in good condition. Steel can be
+          salvaged and used in various construction projects, sculptures, or creative endeavors. Reusing steel helps
+          conserve resources and reduces waste.
+
+          <h4>Recycling: </h4> Recycling is a highly effective method for steel disposal. Steel is a highly recyclable
+          material that can be melted down and used to create new steel products. It has the advantage of being
+          infinitely recyclable without losing its properties. Many recycling centers accept steel scrap, including
+          household appliances, cars, or construction materials. Contact local recycling facilities or waste management
+          authorities to find steel recycling options in your area.
+
+          <h4>Scrap yards: </h4> Scrap yards are specialized facilities that collect, process, and recycle various types
+          of metal, including steel. They often purchase scrap steel from individuals or businesses. Consider taking
+          your steel waste to a reputable scrap yard that follows environmentally responsible practices. Properly
+          sorting and preparing steel waste can help maximize its recycling value.
+
+          <h4>Landfill disposal: </h4> While recycling is the preferred option, there may be cases where steel waste
+          cannot be reused or recycled. In such cases, steel waste may end up in landfills. However, steel is an inert
+          material that does not pose significant environmental risks in landfills. Ensure proper disposal in designated
+          landfill areas that comply with environmental regulations to minimize any potential negative impacts.
+
+          <h4>Responsible demolition and deconstruction: </h4> During demolition or deconstruction projects involving
+          steel structures, it is important to prioritize responsible practices. Employ methods that maximize
+          salvageable steel and minimize waste. This can include carefully dismantling steel components for reuse or
+          recycling, rather than using methods that result in excessive damage or contamination.
+
+          <h4>Energy recovery: </h4> In certain cases, steel waste can be used as a source of energy through processes
+          such as scrap metal combustion in waste-to-energy facilities. These facilities convert steel waste into heat
+          or electricity. However, it is important to ensure that these processes are conducted using appropriate
+          technologies to minimize emissions and potential environmental harm.
+
+          <h4>Source reduction and sustainable practices: </h4> To minimize steel waste generation, practice source
+          reduction by optimizing steel usage. Use durable steel products that have a longer lifespan and prioritize
+          maintenance and repair instead of replacement whenever possible. Additionally, support sustainable steel
+          production practices that prioritize recycling and use of recycled content. .</p>
+          <a href="https://en.wikipedia.org/wiki/Lead" class="wikipedia-link">Learn more on Wikipedia</a>
+        </div>
+        <button class="read-more-button">Read More</button>
+      </div>
+    </div>
+
+
+
+
+    <div class="pollutant-card card">
+      <div class="card-img">
+        <img src="ES/images/formaldehyde.jpeg" alt="formaldehyde">
+      </div>
+      <div class="card-content">
+        <h2>Cloth</h2>
+        <p>Certain fabrics can cause skin irritation, allergies, and discomfort, especially for individuals with
+          sensitivities. Moreover, flammable fabrics can pose a fire hazard if not handled or worn with caution.</p>
+
+        <div class="read-more-content">
+          <p>
+          <h4>Donate or reuse: </h4> If the cloth items are still in good condition, consider donating them to
+          charitable organizations, thrift stores, or community centers. Many people can benefit from second-hand
+          clothing. You can also repurpose cloth items for various purposes such as cleaning rags, crafting materials,
+          or quilting.
+
+          <h4>Clothing swaps: </h4> Participate in clothing swaps or organize one in your community. Clothing swaps
+          allow individuals to exchange clothes they no longer need for items they can use. This helps extend the
+          lifespan of clothing and reduces waste.
+
+          <h4>Recycling: </h4> Textile recycling is a method for cloth disposal. Many communities have textile recycling
+          programs or collection bins. Sort out textiles that are no longer usable or wearable and deposit them in
+          designated recycling bins. Textiles can be recycled into new fabric, insulation materials, or even turned into
+          fibers for use in other products.
+
+          <h4>Composting: </h4> Certain types of natural fibers like cotton or hemp can be composted. If the cloth is
+          made from organic materials and free of synthetic dyes or chemical treatments, you can cut it into small
+          pieces and add it to your compost pile. Remember to follow proper composting guidelines and avoid composting
+          fabrics with synthetic fibers.
+
+          <h4>Upcycling and DIY projects: </h4> Get creative with cloth waste by upcycling it into new items. You can
+          repurpose old clothes or fabrics for various DIY projects such as tote bags, pillow covers, or patchwork
+          quilts. This way, you give a new life to cloth items that would otherwise be discarded.
+
+          <h4>Responsible landfill disposal: </h4> When cloth items cannot be reused, recycled, composted, or upcycled,
+          they may end up in landfills. However, cloth waste takes a long time to decompose in landfills and contributes
+          to environmental issues. Dispose of cloth waste responsibly in designated landfill areas that comply with
+          environmental regulations.
+
+          <h4>Source reduction and sustainable practices: </h4> To minimize cloth waste generation, practice source
+          reduction by buying fewer clothes and focusing on quality and durability. Opt for timeless styles and consider
+          renting or borrowing clothes for special occasions. Embrace a sustainable fashion mindset and support brands
+          that prioritize ethical production, fair trade, and sustainable materials </p>
+          <a href="https://en.wikipedia.org/wiki/Lead" class="wikipedia-link">Learn more on Wikipedia</a>
+        </div>
+        <button class="read-more-button">Read More</button>
+      </div>
+    </div>
+
+
+    <div class="pollutant-card card">
+      <div class="card-img">
+        <img src="ES/images/paper.jpg" alt="formaldehyde">
+      </div>
+      <div class="card-content">
+        <h2>Paper</h2>
+        <p>paper wastes are often burned, causing air pollution, and some of the chemicals contained in these products
+          may damage the environment.</p>
+
+        <div class="read-more-content">
+
+          <p>
+          <h4>Reduce paper consumption:</h4> The best way to manage paper disposal is to reduce paper consumption in the
+          first
+          place. Use digital alternatives whenever possible, such as reading e-books, sending electronic documents,
+          and opting for online billing and statements. Print only when necessary and print on both sides of the paper
+          to maximize usage.
+
+          <h4>Recycling:</h4> Recycling is a key method for paper disposal. Paper recycling involves collecting paper
+          waste,
+          which is then processed into new paper products. Most communities have recycling programs that accept paper
+          waste, including newspapers, magazines, office paper, and cardboard. Make sure to separate paper waste from
+          other types of waste and follow the specific recycling guidelines in your area.
+
+          <h4>Paper shredding:</h4> If you have sensitive documents that need to be discarded, consider shredding them
+          before
+          recycling. Shredding ensures that any confidential information is protected and prevents unauthorized
+          access. Many recycling centers or document destruction services offer paper shredding options.
+
+          <h4>
+            Composting:
+          </h4> Paper waste that is free from plastic coatings, ink, or other contaminants can be composted.
+          Shredded paper or uncoated paper towels can be added to compost piles or bins. Paper products like coffee
+          filters, tea bags, and napkins made from natural fibers can also be composted. However, avoid composting
+          glossy or coated paper, as they may contain harmful chemicals.
+
+          <h4>Responsible landfill disposal:</h4> If paper waste cannot be recycled or composted, it may end up in
+          landfills.
+          However, paper is biodegradable and typically does not pose significant environmental risks in landfills.
+          Dispose of paper waste responsibly in designated landfill areas that comply with environmental regulations.
+
+          <h4> Source reduction: </h4>Minimize paper waste generation by practicing source reduction. Opt for electronic
+          communications and digital storage whenever possible. Use both sides of the paper and encourage double-sided
+          printing in offices. Choose paper products made from recycled materials or sustainably sourced paper.
+
+          <h4> Education and awareness:</h4> Promote education and awareness about responsible paper disposal. Encourage
+          others
+          to recycle paper waste and choose sustainable paper products. Raise awareness about the environmental impact
+          of paper waste and the importance of making sustainable choices.</p>
+
+          <a href="https://en.wikipedia.org/wiki/paper" class="wikipedia-link">Learn more on Wikipedia</a>
+        </div>
+        <button class="read-more-button">Read More</button>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container card">
+      <div class="card">
+        <h2 class="card-title">Student Details</h2>
+        <table class="dhairyashil">
+          <tr>
+            <th>Name</th>
+            <th>PRN</th>
+            <th>Phone Number</th>
+          </tr>
+          <tr>
+            <td>Varad patil  </td>
+            <td> 2203018</td>
+            <td>9190785562</td>
+          </tr>
+
+          <tr>
+            <td>Shriraj Thorat</td>
+            <td>2203006</td>
+            <td>9665960561</td>
+          </tr>
+          <tr>
+            <td>Raj Ghodake</td>
+            <td>2203003</td>
+            <td>8698742727</td>
+          </tr>
+
+          <tr>
+            <td>Rohan Gaikwad</td>
+            <td>2203013</td>
+            <td>8698742727</td>
+          </tr>
+          <tr>
+            <td>Dhairyashil Bhasar</td>
+            <td>2203002</td>
+            <td>8698742727</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+
+    <button class="show-more-button">Show Pollutants</button>
+  </div>
+
+
+  <BR><BR><BR>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>About Us</h3>
+          <p style="text-align: center;">Our mission: Educate, inspire, and empower individuals to create a greener and
+            healthier world through
+            articles, resources, and community engagement.</p>
+        </div>
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <p>Email: info@wastemaster.com</p>
+          <p>Phone: +91 96659 60561<br>+91 8698742727 </p>
+          <p>Address: sakharale, Sangli, India</p>
+        </div>
+        <div class="footer-column">
+          <h3>Follow Us</h3>
+          <ul class="social-media">
+            <li><a href="https://www.facebook.com/sarthak.ruge"><button class="fab fa-facebook"></button> facebook
+              </a></li>
+            <li><a href="https://www.linkedin.com/in/sarthak-ruge-0b2641228"><button class="fab fa-linkedin"></button>
+                linkedin</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p style="color:#f7f3ed">&copy; 2023 WasteMaster. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script>
+    // Get references to the search input and search button
+    var searchInput = document.querySelector('.search-input');
+    var searchButton = document.querySelector('.search-button');
+
+    // Add event listener to the search button
+    searchButton.addEventListener('click', search);
+
+    // Add event listener to the search input
+    searchInput.addEventListener('keypress', function (event) {
+      // Check if the user pressed the Enter key
+      if (event.key === 'Enter') {
+        // Call the search function
+        search();
+      }
+    });
+
+    // Define the search function
+    function search() {
+      // Get the input value
+      var searchTerm = searchInput.value.toLowerCase().trim(); // Convert search term to lowercase and remove leading/trailing whitespace
+
+      // Get all pollutant cards
+      var pollutantCards = document.querySelectorAll('.pollutant-card');
+
+      // Loop through each pollutant card and check if it matches the search term
+      pollutantCards.forEach(function (card) {
+        var cardTitle = card.querySelector('h2').textContent.toLowerCase(); // Get the pollutant name from the card
+
+        // If the pollutant name contains the search term or the search term is empty, display the card; otherwise, hide the card
+        if (cardTitle.includes(searchTerm) || searchTerm === '') {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+      var button = document.querySelector('.show-more-button');
+      var cards = document.querySelectorAll('.card');
+
+      button.addEventListener('click', function () {
+        cards.forEach(function (card) {
+          card.style.display = 'block'; // Show all hidden cards
+        });
+
+        button.style.display = 'none'; // Hide the "Show More" button
+      });
+    });
+    // Add event listeners to the "Read More" buttons
+    const readMoreButtons = document.querySelectorAll('.read-more-button');
+
+    readMoreButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const content = button.previousElementSibling;
+        content.classList.toggle('show');
+        if (content.classList.contains('show')) {
+          button.textContent = 'Read Less';
+        } else {
+          button.textContent = 'Read More';
+        }
+      });
+    });
+
+    // Add event listener to the "Show More" button
+    const showMoreButton = document.querySelector('.show-more-button');
+    const pollutantCards = document.querySelectorAll('.pollutant-card');
+
+    showMoreButton.addEventListener('click', () => {
+      pollutantCards.forEach((card) => {
+        card.style.display = 'block'; // Show all hidden cards
+      });
+
+      showMoreButton.style.display = 'none'; // Hide the "Show More" button
+    });
+
+
+
+  </script>
+
+</body>
+
+</html>
